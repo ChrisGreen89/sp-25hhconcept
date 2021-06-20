@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <style>
         html {
-            height: 4000vh;
+            height: 20000px;
         }
 
         body {
@@ -139,22 +139,22 @@
                             RETRACTION
                         </h4>
 
-                        <hr style="border: solid 1px #333;width: 0%;margin-left:-50px;" id="visor-retraction-border"
-                            class="mt-1" />
+                        <hr style="border: solid 1px #333;width: 0%;margin-left:-50px;opacity:0;"
+                            id="visor-retraction-border" class="mt-1" />
                     </div>
 
                     <div>
                         <h4 style="color:#666;opacity: 0" class=" font-weight-bold mb-0 px-5" id="air-intake">
                             AIR INTAKE / FACE ARMOUR
                         </h4>
-                        <hr style="border: solid 1px #333;width: 0%;margin-left: -50px;" id="air-intake-border"
-                            class="mt-1" />
+                        <hr style="border: solid 1px #333;width: 0%;margin-left: -50px;opacity:0;"
+                            id="air-intake-border" class="mt-1" />
                         <h4 style="color:#666;opacity: 0;margin-top:-75px;margin-left:-50px;"
                             class=" font-weight-bold mb-0 px-5 mt-lg-4" id="ventilation">
                             VENTILATION
                         </h4>
-                        <hr style="border: solid 1px #333;width: 0%;margin-left: -50px;" id="ventilation-border"
-                            class="mt-1" />
+                        <hr style="border: solid 1px #333;width: 0%;margin-left: -50px;opacity:0;"
+                            id="ventilation-border" class="mt-1" />
                     </div>
 
                     <div>
@@ -287,6 +287,15 @@
             .setTween("#visor-retraction", 0.1, { opacity: 1 })
             .addTo(controller);
 
+
+        new ScrollMagic.Scene({
+            duration: 10, // the scene should last for a scroll distance of 100px
+            offset: 11500, // start this scene after scrolling for 50px,
+            triggerElement: "#my-trigger-element"
+        })
+            .setTween("#visor-retraction-border", 0.1, { opacity: 1 })
+            .addTo(controller);
+
         new ScrollMagic.Scene({
             duration: 700, // the scene should last for a scroll distance of 100px
             offset: 11500, // start this scene after scrolling for 50px,
@@ -317,6 +326,15 @@
             triggerElement: "#my-trigger-element"
         })
             .setTween("#air-intake", 0.1, { opacity: 1 })
+            .addTo(controller);
+
+
+        new ScrollMagic.Scene({
+            duration: 10, // the scene should last for a scroll distance of 100px
+            offset: 15000, // start this scene after scrolling for 50px,
+            triggerElement: "#my-trigger-element"
+        })
+            .setTween("#air-intake-border", 0.1, { opacity: 1 })
             .addTo(controller);
 
         new ScrollMagic.Scene({
@@ -357,6 +375,15 @@
             triggerElement: "#my-trigger-element"
         })
             .setTween("#ventilation", 0.1, { opacity: 1 })
+            .addTo(controller);
+
+
+        new ScrollMagic.Scene({
+            duration: 10, // the scene should last for a scroll distance of 100px
+            offset: 18400, // start this scene after scrolling for 50px,
+            triggerElement: "#my-trigger-element"
+        })
+            .setTween("#ventilation-border", 0.1, { opacity: 1 })
             .addTo(controller);
 
         new ScrollMagic.Scene({
